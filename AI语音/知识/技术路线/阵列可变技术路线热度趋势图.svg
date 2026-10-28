@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">阵列可变技术路线热度趋势（库内样本）</title>
+  <desc id="desc">以五条同尺度折线展示 2021 至 2026 年通道集合与归一、规范空间投影、几何与物理条件化、通道无关组件、少麦补全五条路线的年度新增代表性工作数。</desc>
+  <style>
+    text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", Arial, sans-serif; }
+    .ink { fill: #1A2230; }
+    .muted { fill: #667085; }
+    .route-title { font-size: 20px; font-weight: 700; }
+    .route-sub { font-size: 13.5px; fill: #667085; }
+    .metric-total { font-size: 25px; font-weight: 700; }
+    .metric-year { font-size: 20px; font-weight: 700; fill: #344054; }
+    .count { font-size: 12px; font-weight: 700; }
+  </style>
+
+  <rect width="1600" height="900" fill="#F5F7FB"/>
+  <rect width="1600" height="104" fill="#1E4FA8"/>
+  <text x="64" y="45" font-size="34" font-weight="700" fill="#FFFFFF">阵列可变技术路线热度趋势</text>
+  <text x="64" y="79" font-size="17" fill="#D8E5F6">年度新增代表性工作数 · 库内 15 项 SE / SS / TSE 相关样本 · 截至 2026-10</text>
+  <text x="1536" y="57" text-anchor="end" font-size="17" fill="#D8E5F6" letter-spacing="1">TECHNOLOGY TREND</text>
+
+  <rect x="64" y="126" width="1472" height="624" rx="14" fill="#FFFFFF" stroke="#D8E1EE"/>
+  <text x="96" y="166" font-size="16" font-weight="700" class="ink">技术路线</text>
+  <text x="420" y="166" font-size="16" font-weight="700" class="ink">年度走势（每行独立折线，同一纵轴尺度）</text>
+  <text x="1350" y="166" text-anchor="middle" font-size="14" font-weight="700" class="muted">累计 / 项</text>
+  <text x="1465" y="166" text-anchor="middle" font-size="14" font-weight="700" class="muted">2026 / 项</text>
+  <line x1="88" y1="184" x2="1512" y2="184" stroke="#E4E9F0"/>
+
+  <rect x="88" y="196" width="1424" height="80" rx="8" fill="#FBFCFE"/>
+  <rect x="88" y="292" width="1424" height="80" rx="8" fill="#F7F9FC"/>
+  <rect x="88" y="388" width="1424" height="80" rx="8" fill="#FBFCFE"/>
+  <rect x="88" y="484" width="1424" height="80" rx="8" fill="#F7F9FC"/>
+  <rect x="88" y="580" width="1424" height="80" rx="8" fill="#FBFCFE"/>
+
+  <g stroke="#EDF1F5" stroke-width="1">
+    <line x1="440" y1="196" x2="440" y2="660"/>
+    <line x1="600" y1="196" x2="600" y2="660"/>
+    <line x1="760" y1="196" x2="760" y2="660"/>
+    <line x1="920" y1="196" x2="920" y2="660"/>
+    <line x1="1080" y1="196" x2="1080" y2="660"/>
+    <line x1="1240" y1="196" x2="1240" y2="660"/>
+  </g>
+  <g stroke="#E4E9F0" stroke-width="1.2">
+    <line x1="420" y1="264" x2="1260" y2="264"/>
+    <line x1="420" y1="360" x2="1260" y2="360"/>
+    <line x1="420" y1="456" x2="1260" y2="456"/>
+    <line x1="420" y1="552" x2="1260" y2="552"/>
+    <line x1="420" y1="648" x2="1260" y2="648"/>
+  </g>
+  <line x1="1310" y1="196" x2="1310" y2="660" stroke="#E7ECF2"/>
+  <line x1="1408" y1="196" x2="1408" y2="660" stroke="#E7ECF2"/>
+
+  <text x="96" y="230" class="route-title" fill="#2F6BFF">通道集合与归一</text>
+  <text x="96" y="254" class="route-sub">TAC · 注意力 · 通道归一 · 递归</text>
+  <text x="96" y="326" class="route-title" fill="#139D9A">规范空间投影</text>
+  <text x="96" y="350" class="route-sub">Ambisonics · Eigenbeam · HOA</text>
+  <text x="96" y="422" class="route-title" fill="#D98324">几何与物理条件化</text>
+  <text x="96" y="446" class="route-sub">坐标动态卷积 · 混合波束线索</text>
+  <text x="96" y="518" class="route-title" fill="#7A5AF8">通道无关组件</text>
+  <text x="96" y="542" class="route-sub">MCSPP · LSTSC</text>
+  <text x="96" y="614" class="route-title" fill="#D64D5C">少麦补全</text>
+  <text x="96" y="638" class="route-sub">Spatial-Magnifier · 固定已知几何</text>
+
+  <g text-anchor="middle">
+    <text x="1350" y="245" class="metric-total" fill="#2F6BFF">5</text>
+    <text x="1465" y="244" class="metric-year">1</text>
+    <text x="1350" y="341" class="metric-total" fill="#139D9A">5</text>
+    <text x="1465" y="340" class="metric-year">3</text>
+    <text x="1350" y="437" class="metric-total" fill="#D98324">2</text>
+    <text x="1465" y="436" class="metric-year">1</text>
+    <text x="1350" y="533" class="metric-total" fill="#7A5AF8">2</text>
+    <text x="1465" y="532" class="metric-year">0</text>
+    <text x="1350" y="629" class="metric-total" fill="#D64D5C">1</text>
+    <text x="1465" y="628" class="metric-year">1</text>
+  </g>
+
+  <path d="M440 244 L600 264 L760 264 L920 244 L1080 224 L1240 244" fill="none" stroke="#2F6BFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#2F6BFF" stroke-width="2">
+    <circle cx="440" cy="244" r="5"/><circle cx="600" cy="264" r="3"/><circle cx="760" cy="264" r="3"/>
+    <circle cx="920" cy="244" r="5"/><circle cx="1080" cy="224" r="5"/><circle cx="1240" cy="244" r="5"/>
+  </g>
+  <g class="count" fill="#2F6BFF" text-anchor="middle">
+    <text x="440" y="231">1</text><text x="920" y="231">1</text><text x="1080" y="211">2</text><text x="1240" y="231">1</text>
+  </g>
+
+  <path d="M440 360 L600 360 L760 360 L920 360 L1080 320 L1240 300" fill="none" stroke="#139D9A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#139D9A" stroke-width="2">
+    <circle cx="440" cy="360" r="3"/><circle cx="600" cy="360" r="3"/><circle cx="760" cy="360" r="3"/>
+    <circle cx="920" cy="360" r="3"/><circle cx="1080" cy="320" r="5"/><circle cx="1240" cy="300" r="5"/>
+  </g>
+  <g class="count" fill="#139D9A" text-anchor="middle">
+    <text x="1080" y="307">2</text><text x="1240" y="287">3</text>
+  </g>
+
+  <path d="M440 456 L600 456 L760 456 L920 456 L1080 436 L1240 436" fill="none" stroke="#D98324" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#D98324" stroke-width="2">
+    <circle cx="440" cy="456" r="3"/><circle cx="600" cy="456" r="3"/><circle cx="760" cy="456" r="3"/>
+    <circle cx="920" cy="456" r="3"/><circle cx="1080" cy="436" r="5"/><circle cx="1240" cy="436" r="5"/>
+  </g>
+  <g class="count" fill="#D98324" text-anchor="middle">
+    <text x="1080" y="423">1</text><text x="1240" y="423">1</text>
+  </g>
+
+  <path d="M440 552 L600 552 L760 532 L920 552 L1080 532 L1240 552" fill="none" stroke="#7A5AF8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#7A5AF8" stroke-width="2">
+    <circle cx="440" cy="552" r="3"/><circle cx="600" cy="552" r="3"/><circle cx="760" cy="532" r="5"/>
+    <circle cx="920" cy="552" r="3"/><circle cx="1080" cy="532" r="5"/><circle cx="1240" cy="552" r="3"/>
+  </g>
+  <g class="count" fill="#7A5AF8" text-anchor="middle">
+    <text x="760" y="519">1</text><text x="1080" y="519">1</text>
+  </g>
+
+  <path d="M440 648 L600 648 L760 648 L920 648 L1080 648 L1240 628" fill="none" stroke="#D64D5C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FFFFFF" stroke="#D64D5C" stroke-width="2">
+    <circle cx="440" cy="648" r="3"/><circle cx="600" cy="648" r="3"/><circle cx="760" cy="648" r="3"/>
+    <circle cx="920" cy="648" r="3"/><circle cx="1080" cy="648" r="3"/><circle cx="1240" cy="628" r="5"/>
+  </g>
+  <text x="1240" y="615" class="count" fill="#D64D5C" text-anchor="middle">1</text>
+
+  <g font-size="14.5" fill="#667085" text-anchor="middle">
+    <text x="440" y="704">2021</text><text x="600" y="704">2022</text><text x="760" y="704">2023</text>
+    <text x="920" y="704">2024</text><text x="1080" y="704">2025</text><text x="1240" y="704">2026</text>
+  </g>
+  <text x="840" y="730" text-anchor="middle" font-size="13.5" fill="#8B97A8">首次公开年份</text>
+  <text x="96" y="713" font-size="13" fill="#8B97A8">非零点数字 = 当年新增项数</text>
+  <text x="1465" y="713" text-anchor="end" font-size="13" fill="#8B97A8">合计 15 项</text>
+
+  <rect x="64" y="774" width="1472" height="76" rx="12" fill="#EAF1FB" stroke="#C7D8F0"/>
+  <text x="88" y="803" font-size="16" font-weight="700" fill="#1E4FA8">样本观察</text>
+  <text x="196" y="803" font-size="16" class="ink">2025、2026 各新增 6 项；规范空间投影在 2026 新增 3 项，为当年样本最密集路线。</text>
+  <text x="88" y="832" font-size="16" font-weight="700" fill="#9A5B00">读图边界</text>
+  <text x="196" y="832" font-size="16" class="ink">库内收录趋势 ≠ 全网研究热度；2022 的零值仅表示当前样本未覆盖。</text>
+  <text x="64" y="878" font-size="14" fill="#7A8798">数据：Array-Agnostic SE 路线页与模型页　｜　统计口径：首次公开年份，非会议录用年份</text>
+  <text x="1536" y="878" text-anchor="end" font-size="13" fill="#8B97A8" letter-spacing="1">ARRAY-VARIABLE SE</text>
+</svg>
