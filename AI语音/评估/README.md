@@ -21,7 +21,12 @@ tags:
 - [[CHiME（语音分离与识别挑战赛）|CHiME]]：多通道 noisy / distant ASR、阵列前端和会话识别 benchmark 系列。
 - [[NOTSOFAR-1（远场会议转写挑战）]]：CHiME-8 Task 2，真实办公室会议 + 已知几何单设备阵列转写 benchmark。
 - [[DNS Challenge（深度噪声抑制挑战）]]：通信降噪 / deep noise suppression 挑战赛与 benchmark。
+- [[REVERB Challenge（混响语音挑战）]]：2014 年起的老牌去混响 / 远场 ASR 挑战，仿真与真实两组条件的经典口径。
 - [[方向/AI语音/评估/URGENT（通用语音增强挑战）|URGENT]]：universal speech enhancement 多语言、多失真挑战。
+- [[Clarity Enhancement Challenge（助听器语音增强挑战赛）]]：CEC1–CEC3，助听场景下的可懂度加权增强评测。
+- [[MCoRec（多模态上下文识别）]]：CHiME-9 Task 1，多模态上下文感知识别。
+- [[ECHI（助听对话增强）]]：CHiME-9 Task 2，助听对话场景的增强与识别联合评测。
+- [[CHiME and URGENT Chinese Industry Labs（国内工业界参赛记录）]]：阿里 / 腾讯 / 字节 / 华为在 CHiME、URGENT 上的参赛系统与名次记录。
 - [[SUPERB（语音处理通用性能基准）|SUPERB]]：SSL 语音表示通用评测（表示学习时代口径）。
 - [[HEAR（音频表示整体评估）|HEAR]]：跨语音/环境声/音乐的通用音频表示评测。
 - [[AudioBench（音频大模型通用基准）|AudioBench]]：音频大模型通用横评。
@@ -38,10 +43,13 @@ tags:
 ## 单项指标
 
 - [[CER（Character Error Rate）]]、[[CAcc]]：ASR / 内容保持指标。
+- [[WER（词错误率）]]：词级 ASR 错误率，与 CER 的字符级口径不可直接互换。
 - [[SpeechBERTScore（语音语义相似度）]]：参考依赖的语音语义/表示相似度指标。
 - [[PESQ]]、[[STOI 与 ESTOI]]、[[SI-SDR]]（内含 SI-SDRi 增益口径）、[[SIR（信号干扰比）]]：有参考的质量、可懂度和波形保真指标。
 - [[CSIG CBAK COVL（复合客观质量指标）]]：Hu-Loizou 三件套（信号失真 / 背景侵入 / 总体），PESQ 时代标配，与 PESQ 高度共线。
 - [[OVRL_MOS]]、[[NISQA]]、[[UTMOS]]、[[SCOREQ]]：无参考 MOS / 听感预测指标。
+- [[VQScore（语音质量评分）]]：无需参考的干净语音质量判别分数，常用于训练数据筛选（ICLR 2024）。
+- [[FD_PaSST（PaSST 特征 Fréchet 距离）]]：以 PaSST 特征算 Fréchet 距离，音频生成侧的分发级评价。
 - [[SpkSim]]：说话人相似度与身份保持指标。
 - [[NFE（函数评估次数）]]：扩散 / Flow Matching 采样的效率与部署成本指标。
 - [[RTF（实时率）]]：处理时长 / 音频时长；吞吐指标，不等于低延迟，口径四要素缺一不可横比。

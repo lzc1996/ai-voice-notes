@@ -243,7 +243,7 @@ $\hat{\phi}_n(t,f)$ 是 GSS（cACGMM + oracle 标签引导）**在 CM 上**估�
 - [[方向/AI语音/知识/基础概念/Microphone Channel Modeling（麦克风信道建模）|Microphone Channel Modeling]]：源像 / ATF 口径的来源。
 - [[方向/AI语音/知识/技术路线/Real-Data Array SE（真实数据驱动阵列增强）|Real-Data Array SE]]、[[方向/AI语音/知识/技术路线/Hybrid Array SE（传统神经混合阵列增强）|Hybrid Array SE]]、[[方向/AI语音/知识/技术路线/Array SE Roadmap（阵列语音增强技术路线优先级）|阵列语音增强技术路线优先级]]：C2D 的路线归属（真实数据标签生成 + 经典-神经混合）。
 - [[方向/AI语音/知识/调研与地图/Array Speech Enhancement Frontier（阵列语音增强前沿调研）|阵列语音增强前沿调研]]：可挂在「弱监督 / 无监督 / 真实数据」节，与 M2BM 并列但区分范式。
-- [[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]]：同一主题的另一份证据——"target 质量决定 SE 上限"。
+- [[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]]：同一主题的另一份证据——"target 质量决定 SE 上限"。
 - [[方向/AI语音/评估/CHiME（语音分离与识别挑战赛）|CHiME]]、[[方向/AI语音/评估/WER（词错误率）|WER]]、[[方向/AI语音/评估/NOTSOFAR-1（远场会议转写挑战）|NOTSOFAR-1]]：评估来源（CHiME6 / CHiME8、tcpWER、Notsofar1 场景）。
 - [[方向/AI语音/团队/NTT Speech Group（NTT 语音组）|NTT Speech Group]]、[[方向/AI语音/团队/Z.-Q. Wang Group（Zhong-Qiu Wang 组）|Z.-Q. Wang Group]]：作者团队；后者是 SuperM2M（"CM 直接当目标"路线）的作者。
 

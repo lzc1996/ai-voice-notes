@@ -39,7 +39,7 @@ tags:
 | beamformed mixture 弱监督 | [[方向/AI语音/模型/Mixture to Beamformed Mixture（波束形成混合弱监督）]] | 用真实多通道录音 + beamformer 弱标签研究 sim-to-real 适配 |
 | 无监督去混响 / 前向约束 | [[方向/AI语音/模型/USDnet++]] | 用物理前向约束减少 clean target 依赖，给生成式模型提供观测一致性参照 |
 | 真实多通道数据集 | RealMAN、CHiME / NOTSOFAR / AMI / AliMeeting | 用真实房间和真实阵列测试泛化、幻觉、空间失真，而不是只看仿真分数 |
-| 数据筛选与混训 | [[方向/AI语音/论文/Less is More（语音增强数据筛选）]] 口径 | 数据质量和覆盖比盲目堆小时数更重要 |
+| 数据筛选与混训 | [[方向/AI语音/实证研究/Less is More（语音增强数据筛选）]] 口径 | 数据质量和覆盖比盲目堆小时数更重要 |
 
 ## 2. 预研价值
 

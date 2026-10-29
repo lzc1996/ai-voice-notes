@@ -58,10 +58,10 @@ AmbiDrop 论文采用的 FT-JNF 实例把多通道复数 STFT 的实部和虚部
 
 ## 5. 相关对象
 
-- [[方向/AI语音/论文/Insights into Deep Non-linear Filters（多通道增强非线性滤波分析）|Deep Non-linear Filters 论文]]：FT-JNF 的原始论文证据页，记录空间/频谱/时间信息源的受控实验。
+- [[方向/AI语音/实证研究/Insights into Deep Non-linear Filters（多通道增强非线性滤波分析）|Deep Non-linear Filters 论文]]：FT-JNF 的原始论文证据页，记录空间/频谱/时间信息源的受控实验。
 - [[方向/AI语音/模型/AmbiDrop]]：把 FT-JNF 作为多通道增强骨干，并扩展到 Ambisonics 系数输入。
 - [[方向/AI语音/模型/McNet]]：将 FT-JNF 列为离线多通道增强基线。
-- [[方向/AI语音/论文/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]：比较在 FT-JNF 架构上采用不同知识蒸馏方法的模型压缩效果。
+- [[方向/AI语音/实证研究/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]：比较在 FT-JNF 架构上采用不同知识蒸馏方法的模型压缩效果。
 - [[方向/AI语音/模型/WNG-MVDR]]：采用 JNF 特征骨干；该笔记的 JNF 模块描述不应直接等同于上述 FT-JNF 实现。
 
 ## 6. 关键来源

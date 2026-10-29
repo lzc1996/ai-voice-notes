@@ -179,7 +179,7 @@ IPD 特征绑定固定几何，泛化问题需按几何信息可用性拆成三�
 
 - **弱监督**：[[方向/AI语音/模型/Mixture to Beamformed Mixture（波束形成混合弱监督）|Mixture to Beamformed Mixture]]（Z.-Q. Wang 等 2025）用 beamformed mixture 作真实录音的弱标签训练 DNN。
 - **无监督**：[[方向/AI语音/模型/USDnet++|USDnet++]] 无监督去混响；ArrayDPS 用扩散先验做无监督盲分离。
-- **真实数据与数据筛选**：[[方向/AI语音/数据集/RealMAN|RealMAN]] 83.7h 真实 32 通道；URGENT 2026 的关键胜负手是数据筛选（基线把 2500h 用 MOS 精选到 700h，[[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]]），URGENT 2025 也显示 60k 小时 Track 2 未超精选 2.5k 小时 Track 1——**数据质量 > 数据规模**。
+- **真实数据与数据筛选**：[[方向/AI语音/数据集/RealMAN|RealMAN]] 83.7h 真实 32 通道；URGENT 2026 的关键胜负手是数据筛选（基线把 2500h 用 MOS 精选到 700h，[[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]]），URGENT 2025 也显示 60k 小时 Track 2 未超精选 2.5k 小时 Track 1——**数据质量 > 数据规模**。
 
 ## 3. 方案对比分析
 
@@ -263,7 +263,7 @@ IPD 特征绑定固定几何，泛化问题需按几何信息可用性拆成三�
 3. **指标分裂是选型第一约束**：听感指标与内容保持不再同向。面向人耳（助听、会议外放）可向生成式倾斜；面向机器（ASR、转写）与法律/医疗等不容改写的场景，判别式或判别兜底混合是唯一安全选择。
 4. **生成式多通道化是学界未来两年的主战场**：两段式 refiner（ArrayDPS-Refine/Uni-ArrayDPS）工程上更稳，直接多通道扩散（AMDM-SE/mSGMSE）上限未明，Flow Matching 与一步校正（MeCo 式 1 NFE）正在解决采样成本。
 5. **"固定阵列 + 多通道生成式端到端 + 质量终点"是空位**：现有工作要么面向 ASR（CHiME 口径），要么是单通道 LM 化（UniSE/SenSE/L3-SE），固定几何下让模型吃全原始多通道信号、以 URGENT 式质量指标为终点的标杆工作尚不存在——风险与机会并存。
-6. **数据质量 > 数据规模**：URGENT 连续两年验证（60k 小时不敌精选 2.5k 小时；[[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]] 700h）；阵列侧的真实数据（RealMAN 级）与弱监督闭环是比新架构更稀缺的资产。
+6. **数据质量 > 数据规模**：URGENT 连续两年验证（60k 小时不敌精选 2.5k 小时；[[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]] 700h）；阵列侧的真实数据（RealMAN 级）与弱监督闭环是比新架构更稀缺的资产。
 7. **实时与离线已分叉为两个市场**：离线看 DiTSE/GAP-URGENet 级质量；实时看 DeepFilterNet3/DeepFilterGAN（≤40 ms）与流式方案（CUSIDE-array、ARiSE、Stream.FM）；两条线的技术栈正在分化，选型时先定延迟预算再定路线。
 8. **增强与语音大模型的表示级融合是长期方向**：当前工程主流仍是波形级级联；特征级（Mel-McNet → ASR）已验证；表示级（token 共享）受 codec 上限与幻觉制约，阵列空间信息进 token 是公开空白。
 9. **读榜先拆终点**：URGENT = 质量，CHiME/NOTSOFAR = WER/diarization，ECHI = 低延迟助听；把 ASR 榜收益当 SE 质量证据是最常见的调研误判。

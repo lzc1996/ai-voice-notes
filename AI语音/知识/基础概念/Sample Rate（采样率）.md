@@ -61,4 +61,5 @@ tags:
 - [[方向/AI语音/模型/WavLM|WavLM]]、[[方向/AI语音/模型/HuBERT|HuBERT]]：16 kHz 预训练塑造了语音 SSL 生态的采样率标准。
 - [[方向/AI语音/模型/UniSE（Unified Speech Enhancement）|UniSE]]：16 kHz 统一重采样 + 带宽限制失真模拟的实例。
 - [[方向/AI语音/知识/基础概念/NAC（神经音频 Codec）|NAC（神经音频 Codec）]]：现代 codec 逐步转向 24/48 kHz 以支撑高保真重建。
+- [[方向/AI语音/知识/基础概念/Full-Band（全频带）|Full-Band（全频带）]]：采样率之外的有效带宽口径——48 kHz 采样不等于全频带；NB/WB/SWB/FB 四档谱系见该页。
 

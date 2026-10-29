@@ -137,7 +137,7 @@ DNN 估时频掩码 → 空间协方差矩阵 → [[方向/AI语音/知识/基�
 - **Loose Coupling of Spectral and Spatial Models**（Paderborn + NTT，ICASSP 2026）：动态会议/说话人移动下频谱与空间模型松耦合（[arXiv:2601.16077](https://arxiv.org/abs/2601.16077)）。
 - 复数谱映射已成标配（综述：[arXiv:2505.08694](https://arxiv.org/abs/2505.08694)）；手工 [[方向/AI语音/知识/基础概念/IPD（通道间相位差）|IPD]] / [[方向/AI语音/知识/基础概念/ILD（双耳声级差）|ILD]] 特征逐步被可学习空间滤波（跨通道 conv、帧级 DOA 编码、GNN 通道建模）取代。
 - **与 ASR 联合**：从"增强→识别"串行转向面向识别的目标函数，输出 Mel 特征直接接入 Whisper 类编码器；三星 Whisper-Fest（2026）探索无平行数据下增强与 Whisper 级 S2T 联合训练；框架性综述见 Haeb-Umbach 等（[arXiv:2501.07215](https://arxiv.org/abs/2501.07215)）。
-- **[[方向/AI语音/论文/Joint Beamforming and SA-ASR（联合波束形成与说话人属性 ASR）|联合波束形成与 SA-ASR]]**（EUSIPCO 2025）：真实 AMI 上用预训练神经波束形成器（DAS）接说话人属性 ASR，把 ASR loss 反传到前端可再降 9% WER，**但 SI-SDRi 变差**——"读榜先拆终点"的具体反例（[arXiv:2410.21849](https://arxiv.org/abs/2410.21849)）。
+- **[[方向/AI语音/实证研究/Joint Beamforming and SA-ASR（联合波束形成与说话人属性 ASR）|联合波束形成与 SA-ASR]]**（EUSIPCO 2025）：真实 AMI 上用预训练神经波束形成器（DAS）接说话人属性 ASR，把 ASR loss 反传到前端可再降 9% WER，**但 SI-SDRi 变差**——"读榜先拆终点"的具体反例（[arXiv:2410.21849](https://arxiv.org/abs/2410.21849)）。
 - **轻量化**：单通道已很成熟——GTCRN 仅 48.2K 参数（[GitHub](https://github.com/Xiaobin-Rong/gtcrn)）、DeepFilterNet3 48kHz 全带实时、FastEnhancer 单 CPU 线程最快推理；多通道流式以因果神经波束成形（Spatial-DCCRN、align-and-filter）为主。
 - **[[方向/AI语音/模型/LABNet|LABNet]]**（USTC NERC-SLIP，2025-07）：三阶段 + 跨通道注意力的 **52k 参数** ad-hoc 多通道实时增强网络，单次训练即对麦克风数量与几何保持不变（[arXiv:2507.16190](https://arxiv.org/abs/2507.16190)）。
 
@@ -152,7 +152,7 @@ DNN 估时频掩码 → 空间协方差矩阵 → [[方向/AI语音/知识/基�
 - **[[方向/AI语音/模型/C2D Projection（近讲麦到远场投影）|C2D Projection]]**（NTT，ICASSP 2026）：从说话人嘴边的**近讲麦**出发估跨域算子，在远场域**重构目标源像**当干净参考。与 [[方向/AI语音/模型/Mixture to Beamformed Mixture（波束形成混合弱监督）|M2BM]] 的本质差别：M2BM 在同一个远场观测内做空间滤波，"干净"只来自空间置零；C2D 引入了观测之外的干净传感器，跨域投影后分子里的目标 SCM 被换成跨域互协方差 $\Phi_n^{cd}$（[arXiv:2606.13109](https://arxiv.org/abs/2606.13109)）。
 - **[[方向/AI语音/模型/VM-UNSSOR|VM-UNSSOR]]**（SUSTech，ICASSP 2026）：用 IVA / 空间聚类把观测混合线性投影成高 SNR **虚拟麦克风**（$Q=C\times P_r$ 条），把 UNSSOR 的 mixture-consistency 监督从物理通道扩到虚拟通道；2 麦 determined 下从训不起来（−2.7 dB）到 10.7 dB SI-SDR。两条硬约束：虚拟麦必须回投到**全部**物理麦（只回参考麦 15.5 vs 全麦 17.1 dB），且只算损失、不让 DNN 直接拟合虚拟麦（[arXiv:2510.08914](https://arxiv.org/abs/2510.08914)）。
 - **[[方向/AI语音/模型/USD-DPS|USD-DPS]]**（UIUC × SUSTech，WASPAA 2025）：扩散先验 + 逐采样步估计各通道 RIR 的**无监督多通道盲去混响**，用混音一致性构造似然；无监督方法中最优，但仍弱于强监督基线（[arXiv:2508.02071](https://arxiv.org/abs/2508.02071)）。
-- **[[方向/AI语音/论文/Accurate Room-Acoustic Simulation（高保真 RIR 仿真对多通道增强的影响）|高保真 RIR 仿真]]**（Treble Technologies，Interspeech 2026）：模型与训练策略完全不动，只把训练 RIR 从几何声学换成**波动物理仿真**，实测 WER 就显著下降（vs 不知情 ISM 总体 −30.0%、OV40 档 −38.3%）。关键可复用的是**"把参数对准"与"把物理做对"可分离且叠加**——ISM-M 已复刻房间包围盒、收发位置与 T20，仍落后混合方案（[arXiv:2606.31552](https://arxiv.org/abs/2606.31552)）。
+- **[[方向/AI语音/实证研究/Accurate Room-Acoustic Simulation（高保真 RIR 仿真对多通道增强的影响）|高保真 RIR 仿真]]**（Treble Technologies，Interspeech 2026）：模型与训练策略完全不动，只把训练 RIR 从几何声学换成**波动物理仿真**，实测 WER 就显著下降（vs 不知情 ISM 总体 −30.0%、OV40 档 −38.3%）。关键可复用的是**"把参数对准"与"把物理做对"可分离且叠加**——ISM-M 已复刻房间包围盒、收发位置与 T20，仍落后混合方案（[arXiv:2606.31552](https://arxiv.org/abs/2606.31552)）。
 - **[[方向/AI语音/数据集/DRES（荷兰语半自发语音数据集）|DRES]]**（TU Delft，投稿 Interspeech 2026）：80 说话人、1.5h 荷兰语四通道线阵**真实录制**测试集。注意口径错配——原论文明确只用通道 2 做单通道评测，其公开结论不能当多通道 benchmark 或对标基线。
 
 ## 5. 生成式多通道化（重点跟踪）
@@ -204,7 +204,7 @@ DNN 估时频掩码 → 空间协方差矩阵 → [[方向/AI语音/知识/基�
 - **PATSE**（2026）：面向长时多方对话，DOA 引导空间编码器直接输出按说话人的流，免显式 diarization（[arXiv:2606.29497](https://arxiv.org/abs/2606.29497)）。
 - **Spatial-VisualVoice + MAVE**（2025）：可穿戴阵列 + 视觉，保留空间线索面向 AR/VR。
 - **[[方向/AI语音/模型/CI-Spatial|CI-Spatial]]**（Radboud / Leiden UMC，2025-01，期刊版 Scientific Reports）：人工耳蜗麦克风阵列的真实场景双说话人分离。核心结论是**隐式线索越弱、显式 IPD 的增益越大**——单侧双通道 +51.8% SI-SDR，双耳仅 +18.2%，单通道 +3.0%。同模型干场景 SI-SDR 12.96 → 真实场景 2.66（[arXiv:2501.14610](https://arxiv.org/abs/2501.14610)）。
-- **[[方向/AI语音/论文/Mask-based SE for Spatial Audio（掩蔽增强三域对比）|掩蔽增强三域对比]]**（BGU / TU Berlin，2026-09）：用**实值 oracle IRM**（各表示的理论上界，非训练出来的 DNN）横向比较掩蔽作用于麦克风通道 / 波束形成输出 / Ambisonics 三个域。三条可复用结论：①三域都保住了目标线索（ΔITD 全 0），**差异只出现在残余干扰上**；②"哪个域空间最差"随指标翻转（ITD 维度麦克风域最差，ILD 维度波束域最差）；③**期望信号怎么定义，影响大于掩蔽放哪个域**——用直达声当目标时波束域 ΔC50 高达 9.00 dB，改混响目标后降到 0.58 dB（[arXiv:2609.18532](https://arxiv.org/abs/2609.18532)）。
+- **[[方向/AI语音/实证研究/Mask-based SE for Spatial Audio（掩蔽增强三域对比）|掩蔽增强三域对比]]**（BGU / TU Berlin，2026-09）：用**实值 oracle IRM**（各表示的理论上界，非训练出来的 DNN）横向比较掩蔽作用于麦克风通道 / 波束形成输出 / Ambisonics 三个域。三条可复用结论：①三域都保住了目标线索（ΔITD 全 0），**差异只出现在残余干扰上**；②"哪个域空间最差"随指标翻转（ITD 维度麦克风域最差，ILD 维度波束域最差）；③**期望信号怎么定义，影响大于掩蔽放哪个域**——用直达声当目标时波束域 ΔC50 高达 9.00 dB，改混响目标后降到 0.58 dB（[arXiv:2609.18532](https://arxiv.org/abs/2609.18532)）。
 - **MISP 2025 Challenge** 延续多通道远场音视频基准；ICASSP 2026 设 SLP-P47 多模态多通道增强专场。
 
 ## 9. 增强与语音大模型的表示级融合
@@ -235,7 +235,7 @@ DNN 估时频掩码 → 空间协方差矩阵 → [[方向/AI语音/知识/基�
   - **[[方向/AI语音/评估/MCoRec（多模态上下文识别）|MCoRec]]**：冠军 USTC-NERCSLIP + 讯飞（讯飞连续第六届 CHiME 夺冠）——360° 逐人视觉流 + ASD/AVTSE/AVSR + Whisper 与 LLM + ROVER 融合（[arXiv:2603.01415](https://arxiv.org/abs/2603.01415)）；BUT 用 Parakeet-v2 + AV-HuBERT + Qwen3.5 话题聚类。
   - **ECHI**（助听/智能眼镜，严格 20ms 延迟）：代表方案为低延迟多级 MIMO 系统（数据清洗 + 在线波束形成 + 多波束分离器）与三段式（自干扰抑制→TSE→后处理）。
 - **CHiME-10**（2026-07 公布，[官网](https://www.chimechallenge.org/challenges/chime10/index)）：设 ECHI-2、URGENT、SG-TSE 三个任务——ECHI-2（智能眼镜对话增强，多模态，通道数未公布）、URGENT（统一 USE+TSE+AEC，**通道配置未公布**，沿用 2025 单通道版还是升级多通道待核）、SG-TSE（智能眼镜多通道目标说话人提取，明确 multichannel）。
-- **URGENT 2024→2026**：单模型处理噪声/混响/削波/带宽/编解码/丢包/风噪 7 类失真。2025 优胜系统多为预测式多阶段架构（如 TS-URGENet 三阶段），生成式整体稍逊；2026 头部系统几乎清一色**生成+判别混合**（双分支/多级流水线），**数据筛选成胜负手**（基线即把 2500h 用 MOS 精选到 700h，[[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]]），Track 2 语音质量预测头部走 Uni-VERSA-Ext 式训练（[arXiv:2601.13531](https://arxiv.org/abs/2601.13531)）。多通道泛化仍是 URGENT 的薄弱环节。详见 [[方向/AI语音/评估/URGENT（通用语音增强挑战）|URGENT]]。
+- **URGENT 2024→2026**：单模型处理噪声/混响/削波/带宽/编解码/丢包/风噪 7 类失真。2025 优胜系统多为预测式多阶段架构（如 TS-URGENet 三阶段），生成式整体稍逊；2026 头部系统几乎清一色**生成+判别混合**（双分支/多级流水线），**数据筛选成胜负手**（基线即把 2500h 用 MOS 精选到 700h，[[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]]），Track 2 语音质量预测头部走 Uni-VERSA-Ext 式训练（[arXiv:2601.13531](https://arxiv.org/abs/2601.13531)）。多通道泛化仍是 URGENT 的薄弱环节。详见 [[方向/AI语音/评估/URGENT（通用语音增强挑战）|URGENT]]。
 - **DNS Challenge**：2023 年第五届后停办，实时低延迟定位部分由 URGENT 与助听器挑战（Clarity/ECHI）承接。
 - **经典评测集（方法对比锚点）**：新挑战赛看真实场景风向，但论文间可比性仍靠经典集，新论文普遍仍在报：
   - [[方向/AI语音/数据集/AMI Meeting Corpus（会议语料库）|AMI]]：约 100h 英文会议，IHM / SDM / MDM 三种麦克风口径，会议 ASR、diarization、GSS / CSS 前端增强的经典基准（注意跨论文比较时核对 partition 与口径）。
@@ -260,7 +260,7 @@ DNN 估时频掩码 → 空间协方差矩阵 → [[方向/AI语音/知识/基�
 
 1. **P0 生成式多通道上限**：直接多通道扩散 / MIMO 生成、判别前端 → 生成精修、DiffCBF 式物理耦合、one-step flow corrector、codec / latent 多通道生成。覆盖 [[方向/AI语音/模型/ArrayDPS-Refine|ArrayDPS-Refine]]、[[方向/AI语音/模型/Uni-ArrayDPS|Uni-ArrayDPS]]、[[方向/AI语音/模型/AMDM-SE]]、[[方向/AI语音/模型/mSGMSE]]、[[方向/AI语音/模型/DiffCBF]]、[[方向/AI语音/模型/MeCo|MeCo]]。
 2. **P1 阵列泛化 / 少麦表示横评**：AmbiDrop（未知 / 弱几何）/ Geo-DConv（显式坐标）/ MSEN（eigenbeam 规范空间）/ [[方向/AI语音/模型/HyBeam|HyBeam]]（混合）/ [[方向/AI语音/模型/Spatial-Magnifier|Spatial-Magnifier]]（固定几何少麦上采样）；重点看 seen / unseen geometry、传感器缺失和生成式模型能否消费这些空间表示。
-3. **P2 真实数据与弱监督闭环**：URGENT 2026 [[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]] 数据筛选、[[方向/AI语音/模型/Mixture to Beamformed Mixture（波束形成混合弱监督）|beamformed mixture 弱监督]]、[[方向/AI语音/模型/USDnet++|USDnet++]] 无监督、RealMAN 真实数据；目标是验证幻觉、空间失真和 sim-to-real 偏移。
+3. **P2 真实数据与弱监督闭环**：URGENT 2026 [[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]] 数据筛选、[[方向/AI语音/模型/Mixture to Beamformed Mixture（波束形成混合弱监督）|beamformed mixture 弱监督]]、[[方向/AI语音/模型/USDnet++|USDnet++]] 无监督、RealMAN 真实数据；目标是验证幻觉、空间失真和 sim-to-real 偏移。
 4. **P3 空间 / 语义条件化增强**：DOA / TSE / speaker attribution / AVSR 作为生成式增强条件和输出定义，不再只作为下游任务。
 5. **P4 分布式观测建模**：SRO / STO、动态设备、压缩传输、flexible I/O；重点看动态设备集合如何转成大模型可消费的音频观测。
 6. **P5 物理 baseline 与失败模式**：WNG-MVDR、DP-MWF、WPE / CBF、SCM 估计、AEC / 回声泄漏；记录生成式路线必须击败或继承的观测一致性约束。
@@ -280,7 +280,7 @@ DNN 估时频掩码 → 空间协方差矩阵 → [[方向/AI语音/知识/基�
 
 - P3：[[方向/AI语音/模型/MCBSE（多通道说话人提取与双耳语音合成）]]、[[方向/AI语音/模型/NDSE（双麦定向语音增强）]]、[[方向/AI语音/模型/SSM-NBF（说话人选择神经波束形成）]]、[[方向/AI语音/模型/Spatial-VisualVoice（空间视觉语音增强）]]、[[方向/AI语音/模型/VI-NBFNet（视觉引导神经波束形成）]]、[[方向/AI语音/模型/HRTF-TSE（HRTF 引导双耳目标说话人提取）]]、[[方向/AI语音/模型/BiTSE（AR 眼镜双耳目标说话人提取）]]、[[方向/AI语音/模型/ABSE-NET（开放式助听器主动双耳增强）]]。
 - P4：[[方向/AI语音/模型/dMWF（分布式多通道维纳滤波）]]、[[方向/AI语音/模型/CabinSep]]、[[方向/AI语音/模型/Robot-Mic-SE（可重构阵列语音增强平台）]]、[[方向/AI语音/模型/CrossArray-PF（跨阵列非目标估计后滤波）]]、[[方向/AI语音/模型/RT-Tango]]、[[方向/AI语音/模型/TI-dMWF（拓扑无关分布式多通道维纳滤波）]]、[[方向/AI语音/模型/Q-TANGO（量化分布式双耳语音增强）]]、[[方向/AI语音/模型/Online Per-Channel Mask Beamforming（分通道掩码在线波束形成）]]。
-- P5：[[方向/AI语音/模型/RT-NBF（运行时自适应神经波束形成）]]、[[方向/AI语音/模型/ExNet-BF+PF（可解释神经波束形成与后滤波）]]、[[方向/AI语音/模型/OCM-SABF（遮挡自适应波束形成）]]、[[方向/AI语音/模型/NeuralPMWF（小网络控制多通道维纳滤波）]]、[[方向/AI语音/模型/DPLPF-MNB（双路径线性预测与多范数波束形成）]]、[[方向/AI语音/模型/Online-NF-DDB（无失真差分波束在线神经融合）]]、[[方向/AI语音/模型/CycBF-DNN（循环平稳波束形成与神经去噪）]]、[[方向/AI语音/模型/NDBF（双麦可转向高阶神经差分波束形成）]]、[[方向/AI语音/论文/Phoneme-MCSE（多通道增强音素级评估）]]。
-- P6：[[方向/AI语音/模型/LMFCA-Net]]、[[方向/AI语音/模型/MW-SLC（掩码加权空间似然编码）]]、[[方向/AI语音/模型/WTFormer]]、[[方向/AI语音/模型/GAF-Net（全局自适应傅里叶双耳增强）]]、[[方向/AI语音/模型/TF-CorrNet]]、[[方向/AI语音/模型/LSZone]]、[[方向/AI语音/模型/Moving-Sep（移动说话人频谱空间并行分离）]]、[[方向/AI语音/模型/Spectral-Spatial TSE（频谱与空间线索联合说话人提取）]]、[[方向/AI语音/模型/RT-Tango]]、[[方向/AI语音/模型/Q-TANGO（量化分布式双耳语音增强）]]、[[方向/AI语音/模型/Transformer-NBF（低功耗可穿戴实时神经波束形成）]]、[[方向/AI语音/论文/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]、[[方向/AI语音/模型/Binaural-CRNN（复数卷积循环双耳增强）]]。
+- P5：[[方向/AI语音/模型/RT-NBF（运行时自适应神经波束形成）]]、[[方向/AI语音/模型/ExNet-BF+PF（可解释神经波束形成与后滤波）]]、[[方向/AI语音/模型/OCM-SABF（遮挡自适应波束形成）]]、[[方向/AI语音/模型/NeuralPMWF（小网络控制多通道维纳滤波）]]、[[方向/AI语音/模型/DPLPF-MNB（双路径线性预测与多范数波束形成）]]、[[方向/AI语音/模型/Online-NF-DDB（无失真差分波束在线神经融合）]]、[[方向/AI语音/模型/CycBF-DNN（循环平稳波束形成与神经去噪）]]、[[方向/AI语音/模型/NDBF（双麦可转向高阶神经差分波束形成）]]、[[方向/AI语音/实证研究/Phoneme-MCSE（多通道增强音素级评估）]]。
+- P6：[[方向/AI语音/模型/LMFCA-Net]]、[[方向/AI语音/模型/MW-SLC（掩码加权空间似然编码）]]、[[方向/AI语音/模型/WTFormer]]、[[方向/AI语音/模型/GAF-Net（全局自适应傅里叶双耳增强）]]、[[方向/AI语音/模型/TF-CorrNet]]、[[方向/AI语音/模型/LSZone]]、[[方向/AI语音/模型/Moving-Sep（移动说话人频谱空间并行分离）]]、[[方向/AI语音/模型/Spectral-Spatial TSE（频谱与空间线索联合说话人提取）]]、[[方向/AI语音/模型/RT-Tango]]、[[方向/AI语音/模型/Q-TANGO（量化分布式双耳语音增强）]]、[[方向/AI语音/模型/Transformer-NBF（低功耗可穿戴实时神经波束形成）]]、[[方向/AI语音/实证研究/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]、[[方向/AI语音/模型/Binaural-CRNN（复数卷积循环双耳增强）]]。
 
 说明：`2503.09412_RTM-Separation` 属于 P1 阵列泛化，本轮不计入；`Spatial-VisualVoice` 已补建独立对象页。

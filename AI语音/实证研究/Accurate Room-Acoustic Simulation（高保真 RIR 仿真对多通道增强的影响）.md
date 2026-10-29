@@ -178,7 +178,7 @@ LibriSpeech clean test 干声
 ## 8. 连接到上层知识
 
 - [[方向/AI语音/知识/调研与地图/Array Speech Enhancement Frontier（阵列语音增强前沿调研）|Array Speech Enhancement Frontier]]：本页对应其「1.2 评估矩阵」的「真实鲁棒」一行——训练侧仿真保真度决定仿真榜收益能否迁到设备。
-- [[方向/AI语音/知识/技术路线/Real-Data Array SE（真实数据驱动阵列增强）|Real-Data Array SE]]：这是"数据质量 / 仿真假设校准"侧的补充证据；该页「数据筛选与混训」一行目前只有 [[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]]，本页可并列。
+- [[方向/AI语音/知识/技术路线/Real-Data Array SE（真实数据驱动阵列增强）|Real-Data Array SE]]：这是"数据质量 / 仿真假设校准"侧的补充证据；该页「数据筛选与混训」一行目前只有 [[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]]，本页可并列。
 - [[方向/AI语音/知识/基础概念/ISM（Image Source Method，镜像声源法）|ISM]]：两个基线数据集都由 ISM 生成（gpuRIR），是该概念页"sim-to-real 风险"条目的直接证据。
 - [[方向/AI语音/知识/基础概念/Microphone Channel Modeling（麦克风信道建模）|Microphone Channel Modeling]]：开放阵列 vs DRTF（含球体散射）是接收端建模的一维。
 - [[方向/AI语音/知识/基础概念/Direct Path（直达声）|Direct Path]]：训练目标在三个数据集里都用 direct-path 口径（Hybrid 用理论传播时延后加 10 ms 余量加窗）。
@@ -206,4 +206,4 @@ LibriSpeech clean test 干声
 - **venue 补核**：本环境无法访问 arXiv abs 页（域被拦截），Interspeech 2026 依据的是 arXiv 正文的会议模板排版与官方 PDF 文件名；Comments 字段待补核。
 - **是否单独立页**：`Treble SDK`（仿真器工具页）、`LibriCSS-EM6`（数据集页）、`Motus` / `Arni6DoF`（实测 Eigenmike RIR 数据集页）在 vault 内都还不存在；等后续有多篇引用再拆。
 - **跨模型 / 跨阵列可迁移性**：SpatialNet-small + Eigenmike 六通道的结论能否迁到其他 backbone、其他阵列几何或其他语言，需要复现。
-- **与其他 fidelity 证据合并**：可与 [[方向/AI语音/论文/Less is More（语音增强数据筛选）|Less is More]]（clean target 质量）合并成一张"训练数据质量证据卡"。
+- **与其他 fidelity 证据合并**：可与 [[方向/AI语音/实证研究/Less is More（语音增强数据筛选）|Less is More]]（clean target 质量）合并成一张"训练数据质量证据卡"。

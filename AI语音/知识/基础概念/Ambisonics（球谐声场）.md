@@ -60,7 +60,7 @@ Ambisonics 在语音链路里的核心作用是**解耦阵列几何**：模型�
 
 $$\mathbf{a}_{nm}(f) = \mathbf{a}_{nm}^{dir}(f) + \mathbf{a}_{nm}^{rev}(f) + \mathbf{a}_{nm}^{noise}(f)$$
 
-即直达声、混响声与噪声在球谐域可加分解（见 [[方向/AI语音/论文/Mask-based SE for Spatial Audio（掩蔽增强三域对比）]] §3.3 Eq.2）。最终双耳渲染：
+即直达声、混响声与噪声在球谐域可加分解（见 [[方向/AI语音/实证研究/Mask-based SE for Spatial Audio（掩蔽增强三域对比）]] §3.3 Eq.2）。最终双耳渲染：
 
 $$b^{l/r}(f) = \tilde{\mathbf{h}}^{l/r}_{nm}(f)^{T}\,\mathbf{a}_{nm}(f), \qquad \tilde{h}_{nm} = (-1)^m\, h_{n(-m)}$$
 
@@ -111,7 +111,7 @@ $$b^{l/r}(f) = \tilde{\mathbf{h}}^{l/r}_{nm}(f)^{T}\,\mathbf{a}_{nm}(f), \qquad 
 - [[方向/AI语音/知识/基础概念/Higher-Order Ambisonics（高阶 Ambisonics）|HOA（Higher-Order Ambisonics）]]：Ambisonics 中二阶及以上的展开形式。
 - [[方向/AI语音/知识/基础概念/B-format（一阶 Ambisonics）|B-format]]：Ambisonics 的一阶通道格式（W/X/Y/Z），含 FuMa 与 AmbiX 编码约定。
 - [[方向/AI语音/模型/WG-Auto-HOA|WG-Auto-HOA]]：在 HOA 域做空间音频任务的模型。
-- [[方向/AI语音/论文/Mask-based SE for Spatial Audio（掩蔽增强三域对比）]]：球谐域掩蔽 SE 的论文页，本页公式出处。
+- [[方向/AI语音/实证研究/Mask-based SE for Spatial Audio（掩蔽增强三域对比）]]：球谐域掩蔽 SE 的论文页，本页公式出处。
 - [[方向/AI语音/知识/技术路线/Array-Agnostic SE（阵列无关语音增强）]]：以 Ambisonics / eigenbeam 为几何无关规范空间的技术路线。
 
 ## 8. 词源与术语历史

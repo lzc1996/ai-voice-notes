@@ -110,7 +110,7 @@ target[n] = s[n - n0]
 - [[方向/AI语音/知识/基础概念/Reverberation Modeling（混响建模）]]：核心争议是 dereverberation target 是否保留 early reflections。
 - [[方向/AI语音/模型/PGUSE]]、[[方向/AI语音/模型/GAP-URGENet]]：同属 prediction / generation 混合 USE 路线。
 - [[方向/AI语音/模型/UniPASE]]、[[方向/AI语音/模型/SenSE]]：同属 universal SE / 低幻觉生成式增强近邻。
-- [[方向/AI语音/论文/Toward Universal Speech Enhancement for Diverse Input Conditions（通用语音增强开山作）|Toward Universal SE for Diverse Input Conditions]]：ASRU 2023 首个通道数/时长/采样率无关统一 SE 尝试，universal SE 谱系的先行参照；本页的 multilingual 与数据质量重审属后续演进方向。
+- [[方向/AI语音/实证研究/Toward Universal Speech Enhancement for Diverse Input Conditions（通用语音增强开山作）|Toward Universal SE for Diverse Input Conditions]]：ASRU 2023 首个通道数/时长/采样率无关统一 SE 尝试，universal SE 谱系的先行参照；本页的 multilingual 与数据质量重审属后续演进方向。
 
 ## 7. 待验证
 

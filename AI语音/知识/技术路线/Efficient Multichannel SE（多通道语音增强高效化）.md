@@ -14,7 +14,7 @@ title: Efficient Multichannel SE（多通道语音增强高效化）
   - "[[方向/AI语音/模型/CaSNet]]"
   - "[[方向/AI语音/模型/Cloud-Boosted MC-SE（云端增强低算力多通道增强）]]"
   - "[[方向/AI语音/模型/LMFCA-Net|LMFCA-Net（轻量多通道语音增强网络）]]"
-  - "[[方向/AI语音/论文/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]"
+  - "[[方向/AI语音/实证研究/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]"
   - "[[方向/AI语音/模型/LSZone]]"
   - "[[方向/AI语音/模型/GAF-Net（全局自适应傅里叶双耳增强）]]"
   - "[[方向/AI语音/模型/RT-Tango]]"
@@ -57,7 +57,7 @@ tags:
 | 帧自回归增强 | [[方向/AI语音/模型/ARiSE]] | 低 SNR 在线增强；用历史增强帧和 beamformed mixture 提升当前帧 |
 | 低传输 / 端云协同 | [[方向/AI语音/模型/CaSNet]]、[[方向/AI语音/模型/Cloud-Boosted MC-SE（云端增强低算力多通道增强）]] | 分布式设备或穿戴设备，瓶颈在通信、能耗和端侧算力 |
 | 少步生成式 | [[方向/AI语音/模型/MeCo]]、[[方向/AI语音/模型/Stream.FM]] | 未来方向；多通道 SE 还没完全闭环 |
-| 蒸馏、量化与低功耗 | [[方向/AI语音/论文/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]（基于 [[方向/AI语音/模型/FT-JNF（Frequency-Time Joint Non-linear Filter）|FT-JNF]]）、[[方向/AI语音/模型/Q-TANGO（量化分布式双耳语音增强）]]、[[方向/AI语音/模型/Transformer-NBF（低功耗可穿戴实时神经波束形成）]] | 以学生模型、低精度推理和硬件测量降低部署成本 |
+| 蒸馏、量化与低功耗 | [[方向/AI语音/实证研究/FT-JNF Knowledge Distillation（多麦增强知识蒸馏比较）]]（基于 [[方向/AI语音/模型/FT-JNF（Frequency-Time Joint Non-linear Filter）|FT-JNF]]）、[[方向/AI语音/模型/Q-TANGO（量化分布式双耳语音增强）]]、[[方向/AI语音/模型/Transformer-NBF（低功耗可穿戴实时神经波束形成）]] | 以学生模型、低精度推理和硬件测量降低部署成本 |
 | 轻量双耳增强 | [[方向/AI语音/模型/GAF-Net（全局自适应傅里叶双耳增强）]]、[[方向/AI语音/模型/Binaural-CRNN（复数卷积循环双耳增强）]] | 同时记录空间线索与算力，避免只比单通道音质 |
 
 ## 3. 预研价值

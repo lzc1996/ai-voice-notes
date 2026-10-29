@@ -97,7 +97,7 @@ PGUSE 属于 [[方向/AI语音/知识/基础概念/SE（语音增强）导论|SE
 - [[方向/AI语音/知识/生成式语音增强/扩散模型与语音|扩散模型与语音]]：PGUSE 的 generative branch 属于 score-based diffusion。
 - [[方向/AI语音/模型/GAP-URGENet|GAP-URGENet]]：后续更系统化的生成-预测融合路线代表。
 - [[方向/AI语音/模型/SenSE|SenSE]]、[[方向/AI语音/模型/UniPASE|UniPASE]]：同属 2025–2026 前后 universal SE 生成式/低幻觉路线。
-- [[方向/AI语音/论文/Toward Universal Speech Enhancement for Diverse Input Conditions（通用语音增强开山作）|Toward Universal SE for Diverse Input Conditions]]：ASRU 2023 提出的通道数/时长/采样率无关统一 SE 模型与基准，可作 universal SE 谱系的先行参照。
+- [[方向/AI语音/实证研究/Toward Universal Speech Enhancement for Diverse Input Conditions（通用语音增强开山作）|Toward Universal SE for Diverse Input Conditions]]：ASRU 2023 提出的通道数/时长/采样率无关统一 SE 模型与基准，可作 universal SE 谱系的先行参照。
 
 ## 8. 关键来源
 
